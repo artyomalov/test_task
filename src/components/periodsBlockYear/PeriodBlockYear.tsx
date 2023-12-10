@@ -1,9 +1,9 @@
 import React from 'react';
 import StyledPeriodBlockYear from './PeriodBlockYear.style';
-import { time } from 'console';
 
 type Props = {
   year: number;
+  color: string;
 };
 
 const PeriodBlockYear: React.FC<Props> = (props) => {
@@ -28,7 +28,9 @@ const PeriodBlockYear: React.FC<Props> = (props) => {
     return () => clearInterval(interval);
   }, [props.year]);
 
-  return <StyledPeriodBlockYear>{year}</StyledPeriodBlockYear>;
+  return (
+    <StyledPeriodBlockYear $color={props.color}>{year}</StyledPeriodBlockYear>
+  );
 };
 
 export default PeriodBlockYear;

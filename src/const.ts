@@ -1,29 +1,29 @@
 import { PeriodEventsType, PeriodType } from './types';
 
+export const radius = 265;
+
 const periodEvents1: PeriodEventsType[] = [
   {
     key: 1,
     year: 1882,
-    eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci totam veniam. Atque ab magni impedit repellat, iure, laboriosam praesentium provident esse dolorum deserunt quaerat?',
+    eventDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
   },
   {
     key: 2,
     year: 1882,
-    eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci totam veniam. Atque ab magni impedit repellat, iure, laboriosam praesentium provident esse dolorum deserunt quaerat?',
+    eventDescription: 'Lorem ipsum dolor sit amet consectetur',
   },
   {
     key: 3,
     year: 1882,
     eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci totam veniam. Atque ab magni impedit repellat, iure, laboriosam praesentium provident esse dolorum deserunt quaerat?',
+      'cing elit. Consequatur autem omnis minusum deserunt quaerat?',
   },
   {
     key: 4,
     year: 1882,
     eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci totam veniam. Atque ab magni impedit repellat, iure, laboriosam praesentium provident esse dolorum deserunt quaerat?',
+      'Lorem ipsum  autem omnis minus voue ab magni  repellat, iunt quaerat?',
   },
 ];
 const periodEvents2: PeriodEventsType[] = [
@@ -31,28 +31,27 @@ const periodEvents2: PeriodEventsType[] = [
     key: 1,
     year: 1882,
     eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci totam veniam. Atque ab magni impedit repellat, iure, laboriosam praesentium provident esse dolorum deserunt quaerat?',
+      'Lorem ipsu voluptatem adipisci totam veniam. Atque ab magni impedit repellat, iure,deserunt quaerat?',
   },
   {
     key: 2,
     year: 1882,
     eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis ptatem adipisci',
   },
   {
     key: 3,
     year: 1882,
     eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci',
+      ' sit asectetur adip elit. Consequ omnis minus voluptates voluptatem adipisci',
   },
   {
     key: 4,
     year: 1882,
-    eventDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem omnis minus voluptates voluptatem adipisci ',
+    eventDescription: 'Lorem ipsum dolor sit amet consec adip elit.  au omni',
   },
 ];
-export const periodList: PeriodType[] = [
+export const periodsList: PeriodType[] = [
   {
     id: 1,
     years: {
@@ -68,7 +67,7 @@ export const periodList: PeriodType[] = [
       start: 1960,
       end: 1970,
     },
-    title: 'Литература',
+    title: 'Кино',
     periodEvents: periodEvents2,
   },
   {
@@ -77,7 +76,16 @@ export const periodList: PeriodType[] = [
       start: 1980,
       end: 1990,
     },
-    title: 'Литература',
+    title: 'Музыка',
     periodEvents: periodEvents1,
+  },
+  {
+    id: 4,
+    years: {
+      start: 1990,
+      end: 2000,
+    },
+    title: 'История',
+    periodEvents: periodEvents2,
   },
 ];

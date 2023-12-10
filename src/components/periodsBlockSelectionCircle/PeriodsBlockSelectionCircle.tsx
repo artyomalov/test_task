@@ -1,37 +1,36 @@
 import React from 'react';
 import StyledPeriodsBlockSelectionCircle from './PeriodsBlockSelectionCircle.style';
 import PeriodBlockCircleItem from '../periodBlockCircleItem/PeriodBlockCircleItem';
-import { Console } from 'console';
 import createRange from '../../services/createRange';
-import { useAppSelector } from '../../store/typedHooks';
-import {
-  selectPeriodsQuantity,
-  selectSelectedPeriod,
-} from '../../store/selectors';
+import { PeriodType } from '../../types';
+
 type Props = {
-  circleSize: number;
+  periodsQuantity: number;
+  currentPeriodIndex: number;
+  radius: number;
+  theta: number;
+  rotationAngle: number;
+  onClickPeriodSelectorHandler: (selectedPeriod: number) => void;
+  periodList: PeriodType[];
 };
 
 const PeriodsBlockSelectionCircle: React.FC<Props> = (props) => {
-  const radius = props.circleSize / 2;
-  const periodsQuantity = useAppSelector(selectPeriodsQuantity);
-  const angle = 360 / periodsQuantity;
-  const theta = (Math.PI * radius * angle) / 180;
-  const currentPeriod = useAppSelector(selectSelectedPeriod);
-  
-  const onClickPeriodSelectorHandler = (selectedPeriod: number) => {
-    const periodDifferense = currentPeriod - selectedPeriod;
-    const rotationAngle = periodDifferense * angle;
-  };
-
   return (
-    <StyledPeriodsBlockSelectionCircle size={`${props.circleSize}px`}>
+    <StyledPeriodsBlockSelectionCircle
+      $size={`${props.radius * 2}px`}
+      $rotationAngle={props.rotationAngle}
+    >
       <div className="selection-circle__circle">
-        {createRange(0, periodsQuantity).map((item) => (
+        {createRange(0, props.periodsQuantity - 1).map((item) => (
           <PeriodBlockCircleItem
             key={item}
-            radius={radius}
-            theta={theta * item + 3}
+            radius={props.radius}
+            theta={props.theta * item}
+            onClickPeriodSelectorHandler={props.onClickPeriodSelectorHandler}
+            rotationAngle={props.rotationAngle}
+            periodId={item}
+            periodTitle={props.periodList[item].title}
+            selected={props.currentPeriodIndex === item ? 1 : 0}
           />
         ))}
       </div>

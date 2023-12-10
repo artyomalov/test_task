@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PeriodsBlock from './components/periodsBlock/PeriodsBlock';
+import { periodsList, radius } from './const';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <PeriodsBlock />
+      <PeriodsBlock periodsList={periodsList} circleRadius={radius} />
     </div>
   );
-}
+};
 
 export default App;
