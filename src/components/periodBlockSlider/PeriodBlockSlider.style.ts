@@ -84,7 +84,7 @@ const StyledSlider = styled.div<StyledProps>`
   @media (max-width: 320px) {
     height: 145px;
     display: block;
-    .periods-block__period-title {
+    .slider__period-title {
       margin-top: 42px;
       font-size: ${(props) => props.theme.fontSize14};
       font-weight: ${(props) => props.theme.fontWeightBold};
@@ -93,7 +93,7 @@ const StyledSlider = styled.div<StyledProps>`
       letter-spacing: -0.03em;
       text-align: left;
     }
-    .periods-block__horisontal-line {
+    .slider__horisontal-line {
       margin-top: 25px;
       margin-bottom: 20px;
       width: 100%;

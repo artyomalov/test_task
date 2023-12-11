@@ -47,8 +47,8 @@ const PeriodBlockSlider: React.FC<Props> = (props) => {
       >
         <></>
         <>
-          <p className="periods-block__period-title">{periodTitle}</p>
-          <div className="periods-block__horisontal-line"></div>
+          <p className="slider__period-title">{periodTitle}</p>
+          <div className="slider__horisontal-line"></div>
         </>
       </ScreenWidthComponentSelector>
       <Swiper
