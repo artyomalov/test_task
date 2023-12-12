@@ -12,7 +12,12 @@ const StyledPeriodCircleTitle = styled.p<StyledProps>`
   color: ${(props) => props.theme.colorBlackBlue};
   left: 76px;
   bottom: 20px;
-  transition: ${(props) => props.theme.transitionStyle};
+  transition: ${(props) =>
+    props.$visible === 0
+      ? props.theme.transitionStyleFast
+      : props.theme.transitionStyle};
+  transition-delay: ${(props) => (props.$visible === 0 ? 0 : '0.5s')};
+
 `;
 
 export default StyledPeriodCircleTitle;

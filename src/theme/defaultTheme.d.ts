@@ -19,5 +19,6 @@ declare module 'styled-components' {
     fontSize56: string;
     fontSize200: string;
     transitionStyle: string;
+    transitionStyleFast: string;
   }
 }

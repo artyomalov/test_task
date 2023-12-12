@@ -41,8 +41,9 @@ const StyledPeriodsBlockCircleItem = styled.div<StyledProps>`
   .circle-item__number {
     display: inline-block;
     opacity: ${(props) => props.$selected};
-    font-size: 20px;
+    font-size: ${(props) => props.theme.fontSize20};
     font-weight: ${(props) => props.theme.fontWeightRegular};
+    line-height: 30px;
     position: relative;
     top: -6px;
     transition: ${(props) => props.theme.transitionStyle};
@@ -51,6 +52,21 @@ const StyledPeriodsBlockCircleItem = styled.div<StyledProps>`
   &:hover .circle-item__number {
     opacity: 1;
     transform: scale(100%);
+  }
+
+  .circle-item__title {
+    opacity: ${(props) => props.$selected};
+    position: absolute;
+    font-weight: ${(props) => props.theme.fontWeightBold};
+    font-weight: ${(props) => props.theme.fontSize20};
+    color: ${(props) => props.theme.colorBlackBlue};
+    left: 76px;
+    bottom: 20px;
+    transition: ${(props) =>
+      props.$selected === 0
+        ? props.theme.transitionStyleFast
+        : props.theme.transitionStyle};
+    transition-delay: ${(props) => (props.$selected === 0 ? 0 : '0.5s')};
   }
 `;
 

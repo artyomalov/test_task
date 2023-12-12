@@ -18,5 +18,6 @@ const baseTheme: DefaultTheme = {
   fontSize25: '25px',
   fontSize200: '200px',
   transitionStyle: 'all 0.5s ease-in-out',
+  transitionStyleFast: 'all 0.1s ease-in-out',
 };
 export default baseTheme;

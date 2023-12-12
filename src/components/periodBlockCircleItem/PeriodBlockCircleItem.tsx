@@ -1,6 +1,5 @@
 import React from 'react';
 import StyledPeriodsBlockCircleItem from './PeriodBlockCircleItem.style';
-import PeriodCircleTitle from '../periodCircleItemTitle/PeriodCircleTitle';
 
 type Props = {
   radius: number;
@@ -29,10 +28,7 @@ const PeriodBlockCircleItem: React.FC<Props> = (props) => {
       onClick={() => props.onClickPeriodSelectorHandler(props.periodId)}
     >
       <span className="circle-item__number">{props.periodId + 1}</span>
-      <PeriodCircleTitle
-        isVisible={props.selected}
-        titleText={props.periodTitle}
-      />
+      <p className="circle-item__title">{props.periodTitle}</p>
     </StyledPeriodsBlockCircleItem>
   );
 };
